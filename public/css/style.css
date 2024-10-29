@@ -1,0 +1,84 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Prompt", sans-serif;
+}
+html,body{
+    height: 100%;
+}
+
+.mynav{
+    color: #fff;
+}
+
+.mynav li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.mynav li a.active{
+    background: rgba(255,255,255,0.2);
+}
+
+.mynav li a:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+.mynav li a i{
+    width: 25px;
+    text-align: center;
+}
+
+span ,label{
+    font-weight: 500;
+}
+label input[type=text]{
+    width: 120px;
+    outline: none;
+    padding: 2px 5px 2px 5px;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+label input[type=text]:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #495057;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(117, 123, 129, 0.25);
+}
+input[type=search]{
+    width: 500px;
+}
+#search-results {
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal-info div p{
+    font-size: 20px;
+}
+.modal-info div p span{
+    font-weight: bold;
+}
+.modal-info div{
+    width: 368px;
+}
+.modal-info{
+    display: flex;
+    justify-content: space-between;
+}
+.card > h5, .card-body h5 , .card-body h1{
+    color: white;
+}

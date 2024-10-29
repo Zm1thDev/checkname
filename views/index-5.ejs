@@ -1,0 +1,74 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <!-- sidebar -->
+        <%- include('./partials/sidebar') %>
+        <!-- content -->
+        <div class="bg-body-tertiary flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-secondary">
+                <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">เช็คชื่อ</span>
+            </div>
+            <div class="p-4">
+                <nav style="--bs-breadcrumb-divider:'>';font-size:14px">
+                    <ol class="breadcrumb">
+                        <h3>Dashboard<i class="fa-solid fa-chart-line ms-2"></i></h3>
+                    </ol>
+                </nav>
+                <hr>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="date" style="display: flex;">DATE : 
+                            <input class="ms-2" type="text" id="dash-date" placeholder="YYYY-MM-DD">
+                            <button class="btn btn-secondary ms-2 d-flex justify-content-center" onclick="showstatus()" style="width: 35px; height: 30px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </label>         
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card shadow bg-primary">
+                            <h5 class="card-header text-center">มาเรียน</h5>
+                            <div class="card-body" id="card-มาเรียน">
+                              <h5 class="card-title">จำนวน</h5>
+                              <h1 >0 คน</h1>
+                              <h5 class="card-title">ต่อวัน</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card shadow bg-danger">
+                            <h5 class="card-header text-center">ขาดเรียน</h5>
+                            <div class="card-body" id="card-ขาดเรียน">
+                                <h5 class="card-title">จำนวน</h5>
+                                <h1>0 คน</h1>
+                                <h5 class="card-title">ต่อวัน</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card shadow bg-success">
+                            <h5 class="card-header text-center">ลาเรียน</h5>
+                            <div class="card-body" id="card-ลาเรียน">
+                                <h5 class="card-title">จำนวน</h5>
+                                <h1>0 คน</h1>
+                                <h5 class="card-title">ต่อวัน</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card shadow bg-warning">
+                            <h5 class="card-header text-center">มาสาย</h5>
+                            <div class="card-body" id="card-มาสาย">
+                                <h5 class="card-title">จำนวน</h5>
+                                <h1>0 คน</h1>
+                                <h5 class="card-title">ต่อวัน</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <!-- sidebar -->
+        <%- include('./partials/sidebar') %>
+        <!-- content -->
+        <div class="bg-body-tertiary flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-secondary">
+                <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">เช็คชื่อ</span>
+            </div>
+            <div class="p-4">
+                <nav style="--bs-breadcrumb-divider:'>';font-size:14px">
+                    <ol class="breadcrumb">
+                        <h3><li><i class="fa-solid fa-house me-4"></i>ระบบเช็คชื่อ</li></h3>
+                    </ol>
+                </nav>
+                <div class="d-flex justify-content-between">
+                    <h5>วิชา : Web Programming</h5>
+                </div>
+                <hr>
+                <div class="row mb-3">
+                    <div class="col">
+                      <div class="border border-2 border-secondary-subtle rounded py-2 px-4 d-flex justify-content-between align-items-center">
+                        <span>SEC 1</span>
+                        <a href="/sec1" class="px-2 py-1 btn btn-success">เช็คชื่อ</a>
+                      </div>           
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                      <div class="border border-2 border-secondary-subtle rounded py-2 px-4 d-flex justify-content-between align-items-center">
+                        <span>SEC 2</span>
+                        <a href="/sec2" class="px-2 py-1 btn btn-success">เช็คชื่อ</a>
+                      </div>            
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

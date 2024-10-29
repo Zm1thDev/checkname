@@ -1,0 +1,60 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <!-- sidebar -->
+        <%- include('./partials/sidebar') %>
+        <!-- content -->
+        <div class="bg-body-tertiary flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-secondary">
+                <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">เช็คชื่อ</span>
+            </div>
+            <div class="p-4">
+                <nav style="--bs-breadcrumb-divider:'>';font-size:14px">
+                    <ol class="breadcrumb">
+                        <h3 class="me-2">ค้นหา :</h3>
+                        <input type="search" id="search-input" class="form-control me-2" placeholder="ป้อนรหัสนักศึกษามี -" aria-label="Search">
+                        <button id="search-button" class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </ol>
+                </nav>
+                <hr>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin: 0 auto;">
+                            <h4 class="text-center"><i class="fa-solid fa-users me-2"></i>รายชื่อนักศึกษา</h4>
+                            <div class="rounded p-2" style="height: 82vh; background-color: rgb(233, 231, 231);">
+                                <div id="search-results"></div>
+                            </div>
+                        </main>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">ข้อมูลนักศึกษา</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>          
+        </div>
+    </div>
+    
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

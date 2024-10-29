@@ -1,0 +1,72 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <!-- sidebar -->
+        <%- include('./partials/sidebar') %>
+        <!-- content -->
+        <div class="bg-body-tertiary flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-secondary">
+                <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">เช็คชื่อ</span>
+            </div>
+            <div class="p-4">
+                <h5><i class="fa-solid fa-code me-2"></i>Web Programming : SEC 2</h5>
+                <hr>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin: 0 auto;">
+                        <div class="table-responsive">
+                            <form id="students-form">
+                                <div class="d-flex justify-content-between">
+                                    <label for="date">DATE : 
+                                        <input type="text" id="date" placeholder="YYYY-MM-DD">
+                                    </label>
+                                    <a href="/sec2/csv" class="btn btn-sm btn-light"><i class="fa-regular fa-file-excel mx-2"></i>CSV</a>
+                                </div>
+                                <div class="my-4" style="height: 76vh; overflow-y: scroll; overflow-x: auto;">
+                                    <table class="table table-striped table-sm table-hover">
+                                        <thead style="position: sticky; top: 0;">
+                                            <tr>
+                                                <th scope="col" class="text-center">ลำดับ</th>
+                                                <th scope="col">รหัสนักศึกษา</th>
+                                                <th scope="col">ชื่อนักศึกษา</th>
+                                                <th scope="col" class="text-center">มาเรียน</th>
+                                                <th scope="col" class="text-center">ขาดเรียน</th>
+                                                <th scope="col" class="text-center">ลาเรียน</th>
+                                                <th scope="col" class="text-center">มาสาย</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% let count = 1; %>
+                                            <% students.forEach(function(students) { %>
+                                            <tr>
+                                                <td class="text-center"><%= count++ %></td>
+                                                <td><%= students.id %></td>
+                                                <td><%= students.prefix %><%= students.first_name %> <%= students.last_name %></td>
+                                                <td class="text-center"><input type="radio" name="radio-<%= students.id %>" value="มาเรียน" class="form-check-input border-1 border-secondary-subtle"></td>
+                                                <td class="text-center"><input type="radio" name="radio-<%= students.id %>" value="ขาดเรียน" class="form-check-input border-1 border-secondary-subtle"></td>
+                                                <td class="text-center"><input type="radio" name="radio-<%= students.id %>" value="ลาเรียน" class="form-check-input border-1 border-secondary-subtle"></td>
+                                                <td class="text-center"><input type="radio" name="radio-<%= students.id %>" value="มาสาย" class="form-check-input border-1 border-secondary-subtle"></td>
+                                            </tr>
+                                            <% }); %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="/" class="btn btn-secondary">กลับ</a>
+                                    <button type="submit" class="btn btn-success" onclick="AddData()">บันทึกข้อมูล</button>
+                                </div>
+                            </form>
+                        </div>
+                    </main>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
